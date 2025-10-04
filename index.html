@@ -1,0 +1,76 @@
+<!-- 
+  Project: Rock Paper Scissors Game
+  Description: A simple web-based Rock Paper Scissors game where the player
+               chooses Rock, Paper, or Scissors and the computer randomly 
+               selects a choice after a short "thinking" animation. 
+               The result is displayed and the score is tracked.
+  Author: Jowuan Williams
+  Date: 10/1/25
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors</title>
+  <!-- Link to the CSS file for styling -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Page Title -->
+  <h1>Rock Paper Scissors</h1>
+
+  <div id="game">
+    <!-- =======================
+         Player Section
+         ======================= -->
+    <section id="player">
+      <h2>Your Throw</h2>
+      <div class="choices">
+        <!-- Buttons: Each has a data attribute so JS knows the player's throw -->
+        <button class="choice" data-throw="rock">
+          <img src="rock.png" alt="Rock">
+        </button>
+        <button class="choice" data-throw="paper">
+          <img src="paper.png" alt="Paper">
+        </button>
+        <button class="choice" data-throw="scissors">
+          <img src="scissors.png" alt="Scissors">
+        </button>
+      </div>
+    </section>
+
+    <!-- =======================
+         Computer Section
+         ======================= -->
+    <section id="computer">
+      <h2>Computer Throw</h2>
+      <!-- Starts blank until computer makes a choice -->
+      <img id="computer-img" alt="Computer choice">
+      <p id="thinking">Waiting for your choice…</p>
+    </section>
+
+    <!-- =======================
+         Outcome Section
+         ======================= -->
+    <section id="outcome">
+      <h2>Result</h2>
+      <!-- Shows result of the round -->
+      <p id="result">—</p>
+      <!-- Scoreboard -->
+      <p class="score">
+        W: <strong id="wins">0</strong>
+        L: <strong id="losses">0</strong>
+        T: <strong id="ties">0</strong>
+      </p>
+      <!-- Reset button clears everything -->
+      <button id="reset">Reset</button>
+    </section>
+  </div>
+
+  <!-- Link to the JavaScript file for interactivity -->
+  <script src="script.js"></script>
+</body>
+</html>

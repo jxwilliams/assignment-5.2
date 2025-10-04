@@ -1,0 +1,61 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  margin: 16px 0;
+  font-size: 22px;
+}
+
+/* Game container */
+#game {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 8px 12px 24px;
+  border: 1px solid #ccc;
+}
+
+/* Section layout */
+section {
+  padding: 8px 0;
+}
+section + section {
+  border-top: 1px solid #ddd;
+}
+
+h2 {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+/* Choice buttons */
+.choices {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.choice {
+  background: #fff;
+  border: 2px solid #ccc;
+  padding: 6px;
+  cursor: pointer;
+}
+.choice img {
+  width: 120px;
+  height: auto;
+  display: block;
+}
+.choice.selected {
+  border-color: #d22
+}
